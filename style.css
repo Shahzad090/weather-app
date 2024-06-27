@@ -88,6 +88,6 @@ text-align: center;
 .weather-box .discription {
 font-size: 20px;
 font-weight: 700;
-/* text-transform: capitalize; */
+text-transform: capitalize;
 }
 
