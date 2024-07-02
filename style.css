@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  width: 330px;
+  width: 340px;
   height: min-content;
   background-color: #fff;
   border-radius: 12px;
@@ -47,7 +47,7 @@ body {
   width: 50px;
   height: 40px;
   background-color: lightgrey;
-  border-radius: 39%;
+  border-radius: 59%;
   cursor: pointer;
   font-size: 18px;
 }
@@ -65,7 +65,7 @@ body {
 }
 
 .weather-body img {
-  width: 50%;
+  width: 40%;
 }
 
 .weather-box {
@@ -91,3 +91,33 @@ font-weight: 700;
 text-transform: capitalize;
 }
 
+.weather-details{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.humidity, .wind{
+display: flex;
+align-items: center;
+}
+
+.humidity{
+  margin-left: 20px;
+}
+
+.wind{
+  margin-right: 20px;
+}
+
+.weather-details i{
+  font-size: 35px;
+}
+.weather-details .text{
+  margin-left: 10px;
+  font-size: 16px;
+}
+.text span{
+  font-size: 20px;
+  font-weight: 700;
+}
