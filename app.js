@@ -9,7 +9,7 @@ const wind_speed = document.getElementsByid('wind-speed');
 
 async function checkWeather(city){
     const api_key = "e55672564eeeb6c1eef9aa0a44a9b185";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api_key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
     const weather_data = await fetch(`${url}`).then(response => response.json());
 
@@ -18,6 +18,6 @@ async function checkWeather(city){
 
 
 
-searchBtn.addEventListener('click, ()=>'{
+searchBtn.addEventListener('click', ()=>{
     checkWeather(inputBox.value);
 })
