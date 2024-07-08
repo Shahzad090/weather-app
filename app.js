@@ -1,10 +1,10 @@
 const inputBox = document.querySelector('input-box');
-const searchBtn = document.getElementsByid('searchBtn');
+const searchBtn = document.getElementByid('searchBtn');
 const weather_img = document.querySelector('weather-img');
 const temprature = document.querySelector('temprature');
 const discription = document.querySelector('discription');
-const humidity = document.getElementsByid('humidity');
-const wind_speed = document.getElementsByid('wind-speed');
+const humidity = document.getElementByid('humidity');
+const wind_speed = document.getElementById('wind-speed');
 
 
 async function checkWeather(city){
