@@ -16,9 +16,11 @@ async function checkWeather(city){
     temprature.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}°C`;
 
    discription.innerHTML = `${weather_data.weather[0].discription}`;
+console.log(weather_data)
+//    humidity.innerHTML = `${weather_data.main.humidity}%`;
 
-   humidity.innerHTML = `${weather_data.weather.humidity}%`;
-}
+//    wind_speed.innerHTML = `${weather_data.wind.speed}Km/H`;
+// }
 
 
 
