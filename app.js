@@ -1,9 +1,9 @@
-const inputBox = document.querySelector('input-box');
-const searchBtn = document.getElementByid('searchBtn');
-const weather_img = document.querySelector('weather-img');
-const temprature = document.querySelector('temprature');
-const discription = document.querySelector('discription');
-const humidity = document.getElementByid('humidity');
+const inputBox = document.querySelector('.input-box');
+const searchBtn = document.getElementById('searchBtn')
+const weather_img = document.querySelector('.weather-img');
+const temprature = document.querySelector('.temprature');
+const discription = document.querySelector('.discription');
+const humidity = document.getElementById('humidity')
 const wind_speed = document.getElementById('wind-speed');
 
 
@@ -13,11 +13,15 @@ async function checkWeather(city){
 
     const weather_data = await fetch(`${url}`).then(response => response.json());
 
-    temprature.innerHTML = `${weather_data.main.temp}`;
+    temprature.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}°C`;
+
+   discription.innerHTML = `${weather_data.weather[0].discription}`;
+
+   humidity.innerHTML = `${weather_data.weather.humidity}%`;
 }
 
 
 
 searchBtn.addEventListener('click', ()=>{
     checkWeather(inputBox.value);
-})
+});
