@@ -14,6 +14,11 @@ async function checkWeather(city) {
     response.json()
   );
 
+if(weather_data.cod === '404'){
+return;
+
+}
+
   temprature.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}°C`;
 
   discription.innerHTML = `${weather_data.weather[0].main}`;
@@ -22,7 +27,7 @@ async function checkWeather(city) {
 
   wind_speed.innerHTML = `${weather_data.wind.speed}Km/H`;
 
-  switch (weather_data.weather[0].main) {
+  switch(weather_data.weather[0].main){
     case 'Clear':
       weather_img.src = "/image/clear.png";
       break;
