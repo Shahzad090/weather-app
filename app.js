@@ -16,12 +16,6 @@ async function checkWeather(city) {
     response.json()
   );
 
-  // if (weather_data.cod === "404") {
-  //   location_not_found.style.display = "flex";
-  //   weather_body.style.display = "none";
-  //   console.log("error");
-  //   return;
-  // }
 
   // location_not_found.style.display = "none";
   // weather_body.style.display = "flex";
