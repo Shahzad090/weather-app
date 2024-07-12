@@ -6,7 +6,7 @@ const discription = document.querySelector('.discription');
 const humidity = document.getElementById('humidity');
 const wind_speed = document.getElementById('wind-speed');
 const location_not_found = document.querySelector('location-not-found');
-const weather_body = document.querySelector('weather-body');
+const weather_body = document.querySelector('.weather-body');
 
 async function checkWeather(city){
   const api_key = "e55672564eeeb6c1eef9aa0a44a9b185";
@@ -50,6 +50,6 @@ if(weather_data.cod === '404'){
   }
 }
 
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", () =>{
   checkWeather(inputBox.value);
 });
