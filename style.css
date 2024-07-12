@@ -57,7 +57,7 @@ body {
 }
 
 .weather-body {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -124,7 +124,7 @@ align-items: center;
 
 .location-not-found{
   margin-top: 20px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
