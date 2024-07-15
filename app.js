@@ -1,14 +1,14 @@
-const inputBox = document.querySelector('.input-box');
-const searchBtn = document.getElementById('searchBtn');
-const weather_img = document.querySelector('.weather-img');
-const temprature = document.querySelector('.temprature');
-const discription = document.querySelector('.discription');
-const humidity = document.getElementById('humidity');
-const wind_speed = document.getElementById('wind-speed');
-const location_not_found = document.querySelector('location-not-found');
-const weather_body = document.querySelector('.weather-body');
+const inputBox = document.querySelector(".input-box");
+const searchBtn = document.getElementById("searchBtn");
+const weather_img = document.querySelector(".weather-img");
+const temprature = document.querySelector(".temprature");
+const discription = document.querySelector(".discription");
+const humidity = document.getElementById("humidity");
+const wind_speed = document.getElementById("wind-speed");
+const location_not_found = document.querySelector("location-not-found");
+const weather_body = document.querySelector(".weather-body");
 
-async function checkWeather(city){
+async function checkWeather(city) {
   const api_key = "e55672564eeeb6c1eef9aa0a44a9b185";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
@@ -16,12 +16,12 @@ async function checkWeather(city){
     response.json()
   );
 
-if(weather_data.cod === '404'){
-  location_not_found.style.display = "flex";
-  weather_body.style.display = "none";
-  console.log("error");
-  return;
-}  
+  if (weather_data.cod === "404") {
+    location_not_found.style.display = "flex";
+    weather_body.style.display = "none";
+    console.log("error");
+    return;
+  }
   location_not_found.style.display = "none";
   weather_body.style.display = "flex";
   temprature.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}°C`;
@@ -50,6 +50,6 @@ if(weather_data.cod === '404'){
   }
 }
 
-searchBtn.addEventListener("click", () =>{
+searchBtn.addEventListener("click", () => {
   checkWeather(inputBox.value);
 });
