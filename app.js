@@ -22,8 +22,8 @@ async function checkWeather(city) {
     console.log("error");
     return;
   }
-  location_not_found.style.display = "none";
-  weather_body.style.display = "flex";
+  // location_not_found.style.display = "none";
+  // weather_body.style.display = "flex";
   temprature.innerHTML = `${Math.round(weather_data.main.temp - 273.15)}°C`;
   discription.innerHTML = `${weather_data.weather[0].main}`;
 
